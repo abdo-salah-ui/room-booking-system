@@ -1,0 +1,94 @@
+<html dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>حجز الغرف</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>نظام حجز الغرف</h1>
+        <div class="admin-panel">
+            <button id="adminLogin" class="admin-btn">تسجيل دخول المسؤول</button>
+            <span id="adminStatus" class="admin-status"></span>
+        </div>
+        <div class="stats">
+            <p>إجمالي عدد الأشخاص: <span id="totalPeople">66</span></p>
+            <p>عدد الأشخاص المتبقي: <span id="remainingPeople">66</span></p>
+        </div>
+        
+        <div class="building">
+            <div class="floor">
+                <div class="room" data-beds="3">
+                    <h3>غرفة 1</h3>
+                    <p>3 سرير</p>
+                    <div class="beds"></div>
+                    <button class="book-btn">احجز</button>
+                </div>
+                
+                <div class="room" data-beds="4">
+                    <h3>غرفة 2</h3>
+                    <p>4 سرير</p>
+                    <div class="beds"></div>
+                    <button class="book-btn">احجز</button>
+                </div>
+
+                <div class="room" data-beds="5">
+                    <h3>غرفة 3</h3>
+                    <p>5 سرير</p>
+                    <div class="beds"></div>
+                    <button class="book-btn">احجز</button>
+                </div>
+
+                <div class="room" data-beds="3">
+                    <h3>غرفة 4</h3>
+                    <p>3 سرير</p>
+                    <div class="beds"></div>
+                    <button class="book-btn">احجز</button>
+                </div>
+
+                <div class="room" data-beds="4">
+                    <h3>غرفة 5</h3>
+                    <p>4 سرير</p>
+                    <div class="beds"></div>
+                    <button class="book-btn">احجز</button>
+                </div>
+
+                <div class="room" data-beds="5">
+                    <h3>غرفة 6</h3>
+                    <p>5 سرير</p>
+                    <div class="beds"></div>
+                    <button class="book-btn">احجز</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for booking -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>حجز سرير في غرفة <span id="roomNumber"></span></h2>
+            <div id="nameInputs">
+                <input type="text" class="name-input" placeholder="اسمك" required>
+                <div id="errorMessage" class="error-message"></div>
+            </div>
+            <button id="confirmBooking">تأكيد الحجز</button>
+        </div>
+    </div>
+
+    <!-- Admin Login Modal -->
+    <div id="adminModal" class="modal">
+        <div class="modal-content">
+            <span class="close admin-close">&times;</span>
+            <h2>تسجيل دخول المسؤول</h2>
+            <div class="admin-login-form">
+                <input type="password" id="adminPassword" class="admin-input" placeholder="كلمة المرور">
+                <div id="adminError" class="error-message"></div>
+                <button id="confirmAdminLogin" class="admin-login-btn">تسجيل الدخول</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
